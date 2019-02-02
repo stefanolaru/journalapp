@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" href="style.7f4a36768916139160c6.css">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.ico">
+	<!-- development version, includes helpful console warnings -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script> -->
+
+</head>
+<body class="h-screen bg-grey-lighter">
+	<div id="app" class="container flex mx-auto mt-8">
+		<div class="w-full" v-if="offline">You're offline, don't worry the app still works.</div>
+		<div class="flex-1">
+			<login-component :user="user"></login-component>
+			<entries-component :user="user"></entries-component>
+		</div>
+	</div>
+	<script src="main.2a87b0261efba400fca6.js"></script>
+</body>
+</html>
