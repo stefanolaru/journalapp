@@ -8,7 +8,7 @@ self.addEventListener('install', event => {
         caches
             .open(CACHE_NAME)
             .then(cache => {
-                return fetch('/resources-manifest.json')
+                return fetch('./resources-manifest.json')
                     .then(resp => resp.json())
                     .then(json => {
                         var res = TO_CACHE;
