@@ -1,4 +1,4 @@
-const VER = 0.13;
+const VER = 16;
 const CACHE_NAME = 'JournalApp.v.'+VER;
 
 const TO_CACHE = ['/'];

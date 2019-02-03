@@ -6186,9 +6186,57 @@ table {
 
 #app textarea {
   caret-color: #3490dc;
-  box-sizing: padding-box;
+  display: block;
   overflow: hidden;
   font-family: 'Roboto Mono', monospace;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#entry-uploader {
+  border-bottom: 2px solid #6574cd;
+}
+
+#entry-uploader .media-item {
+  flex: 1;
+}
+
+#entry-uploader .media-item button {
+  display: none;
+  top: .25rem;
+  right: .25rem;
+  z-index: 10;
+}
+
+#entry-uploader .media-item:after {
+  content: '';
+  position: absolute;
+  left: .25rem;
+  top: .25rem;
+  right: .25rem;
+  bottom: .25rem;
+  background: rgba(0, 0, 0, .5);
+  opacity: 0;
+  border-radius: .125rem;
+}
+
+#entry-uploader .media-item:hover:after {
+  opacity: 1;
+  transition-duration: .2s;
+}
+
+#entry-uploader .media-item:hover button {
+  display: block;
+}
+
+.dz-drag-hover:before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: 0;
+  border: 2px dashed #6574cd;
 }
 
 @media (min-width: 576px) {
